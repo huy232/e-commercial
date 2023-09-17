@@ -1,13 +1,11 @@
+const nextTranslate = require("next-translate-plugin")
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+	i18n: {
+		defaultLocale: "en",
+		locales: ["en", "vi"],
+	},
+}
 
-const withNextIntl = require("next-intl/plugin")(
-	// This is the default (also the `src` folder is supported out of the box)
-	"./i18n.ts"
-)
-
-module.exports = withNextIntl({
-	// Other Next.js configuration ...
-})
-
-module.exports = nextConfig
+module.exports = nextTranslate(nextConfig)
