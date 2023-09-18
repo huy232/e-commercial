@@ -1,11 +1,6 @@
-const nextTranslate = require("next-translate-plugin")
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	i18n: {
-		defaultLocale: "en",
-		locales: ["en", "vi"],
-	},
+	/* config options here */
 }
 
-module.exports = nextTranslate(nextConfig)
+module.exports = nextConfig
