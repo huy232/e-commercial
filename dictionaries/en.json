@@ -1,5 +1,14 @@
 {
-  "welcome": "Welcome to my website!",
-  "home": "Home",
-  "about": "About"
+  "Index": {
+    "title": "Home page",
+    "description": "Welcome to my homepage"
+  },
+  "AboutPage": {
+    "title": "About page",
+    "description": "Welcome to my about page"
+  },
+  "NotFoundPage": {
+    "title": "404 not found page",
+    "description": "Looks like you got lost to another dimension"
+  }
 }

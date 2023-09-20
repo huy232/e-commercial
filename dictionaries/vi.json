@@ -1,5 +1,10 @@
 {
-  "welcome": "Chào mừng bạn đến với trang web của tôi!",
-  "home": "Trang chủ",
-  "about": "Giới thiệu"
+  "Index": {
+    "title": "Trang chủ",
+    "description": "Trang chủ của tôi"
+  },
+  "AboutPage": {
+    "title": "Trang about",
+    "description": "Chào mừng đến trang About!"
+  }
 }
