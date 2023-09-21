@@ -10,5 +10,9 @@
   "NotFoundPage": {
     "title": "404 not found page",
     "description": "Looks like you got lost to another dimension"
+  },
+  "LoginPage": {
+    "login": "Login",
+    "signUp": "Sign up"
   }
 }

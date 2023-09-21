@@ -6,5 +6,13 @@
   "AboutPage": {
     "title": "Trang about",
     "description": "Chào mừng đến trang About!"
+  },
+  "NotFoundPage": {
+    "title": "Lỗi không tìm thấy",
+    "description": "Có vẻ bạn đã lạc vào chiều không gian khác"
+  },
+  "LoginPage": {
+    "login": "Đăng nhập",
+    "signUp": "Đăng ký"
   }
 }

@@ -1,5 +1,4 @@
-"use client"
-
+// "use client"
 import { useTranslations } from "next-intl"
 
 export default function Index() {
