@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { useTranslations } from "next-intl"
+import { ThemeSwitcher } from "@/components/ThemeSwitcher"
 
 type Props = {}
 export default function Header({}: Props) {
@@ -18,6 +19,7 @@ export default function Header({}: Props) {
 				</form>
 			</div>
 			<Link href={"login"}>{login}</Link>
+			<ThemeSwitcher />
 		</header>
 	)
 }

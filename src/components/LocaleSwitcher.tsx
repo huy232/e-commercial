@@ -2,7 +2,9 @@
 
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { i18n } from "../../i18n-config"
+import { I18nConfig } from "../i18n"
+
+const i18n = require("../i18n").default as I18nConfig
 
 export default function LocaleSwitcher() {
 	const pathName = usePathname()
