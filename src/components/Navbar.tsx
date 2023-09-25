@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { ThemeSwitcher } from "@/components/ThemeSwitcher"
+import SearchBar from "./SearchBar"
+import { BiLogInCircle } from "react-icons/bi"
 
 type Props = {}
 export default function Header({}: Props) {
@@ -9,17 +11,27 @@ export default function Header({}: Props) {
 	const signup = t("signUp")
 
 	return (
-		<header className="flex flex-cols">
+		<header className="flex flex-cols justify-between items-center h-[60px] w-full">
 			<div>
-				<Link href={`/`}>Logo</Link>
+				<Link
+					href={`/`}
+					className="bold uppercase font-black hover:opacity-70 duration-200"
+				>
+					Witzi
+				</Link>
 			</div>
-			<div>
-				<form>
-					<input type="text" />
-				</form>
+			<div className="">
+				<SearchBar translation={t("searchPlaceholder")} />
 			</div>
-			<Link href={"login"}>{login}</Link>
-			<ThemeSwitcher />
+			<div className="flex items-center">
+				<ThemeSwitcher />
+				<Link
+					className="flex flex-cols items-center hover:opacity-70 duration-200 bg-green-500 dark:bg-yellow-500 p-1 rounded mx-2"
+					href={"login"}
+				>
+					<BiLogInCircle className="mr-1" /> {login}
+				</Link>
+			</div>
 		</header>
 	)
 }

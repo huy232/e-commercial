@@ -12,7 +12,8 @@
     "description": "Looks like you got lost to another dimension"
   },
   "LoginPage": {
-    "login": "Login",
-    "signUp": "Sign up"
+    "login": "Log in",
+    "signUp": "Sign up",
+    "searchPlaceholder": "Search for specific product..."
   }
 }

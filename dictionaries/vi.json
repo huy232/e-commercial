@@ -13,6 +13,7 @@
   },
   "LoginPage": {
     "login": "Đăng nhập",
-    "signUp": "Đăng ký"
+    "signUp": "Đăng ký",
+    "searchPlaceholder": "Tìm kiếm một sản phẩm cụ thể..."
   }
 }

@@ -3,16 +3,11 @@
 @tailwind utilities;
 
 :root {
-	--primary: #191717;
-	--background: #f1efef;
-	--button: #ff5d5d;
+	--header-height: 60px;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--primary: #e55604;
-		--background: #2c2a2a;
-		--button: #cac6c6;
 	}
 }
 
