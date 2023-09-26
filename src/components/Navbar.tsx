@@ -2,7 +2,7 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { ThemeSwitcher } from "@/components/ThemeSwitcher"
 import SearchBar from "./SearchBar"
-import { BiLogInCircle } from "react-icons/bi"
+import SignInButton from "./SignInButton"
 
 type Props = {}
 export default function Header({}: Props) {
@@ -25,12 +25,7 @@ export default function Header({}: Props) {
 			</div>
 			<div className="flex items-center">
 				<ThemeSwitcher />
-				<Link
-					className="flex flex-cols items-center hover:opacity-70 duration-200 bg-green-500 dark:bg-yellow-500 p-1 rounded mx-2"
-					href={"login"}
-				>
-					<BiLogInCircle className="mr-1" /> {login}
-				</Link>
+				<SignInButton translation={t("login")} />
 			</div>
 		</header>
 	)

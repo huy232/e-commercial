@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+const forms = require("@tailwindcss/forms")
 
 const config: Config = {
 	content: [
@@ -10,6 +11,6 @@ const config: Config = {
 	theme: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [forms],
 }
 export default config
