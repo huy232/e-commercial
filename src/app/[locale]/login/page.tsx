@@ -13,26 +13,14 @@ export default function Login() {
 	const supabase = createClientComponentClient<Database>()
 
 	const handleSignUp = async () => {
-		await supabase.auth.signUp({
-			email,
-			password,
-			options: {
-				emailRedirectTo: `${location.origin}/auth/callback`,
-			},
-		})
 		router.refresh()
 	}
 
 	const handleSignIn = async () => {
-		await supabase.auth.signInWithPassword({
-			email,
-			password,
-		})
 		router.refresh()
 	}
 
 	const handleSignOut = async () => {
-		await supabase.auth.signOut()
 		router.refresh()
 	}
 

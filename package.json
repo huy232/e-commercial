@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.2",
+    "@reduxjs/toolkit": "^1.9.6",
     "@supabase/auth-helpers-nextjs": "^0.8.1",
     "@supabase/supabase-js": "^2.36.0",
     "@types/node": "20.6.0",
@@ -24,6 +25,7 @@
     "next": "13.4.19",
     "next-auth": "^4.23.1",
     "next-intl": "^3.0.0-beta.18",
+    "next-redux-wrapper": "^8.1.0",
     "next-themes": "^0.2.1",
     "next-translate": "^2.5.3",
     "postcss": "8.4.29",
@@ -31,6 +33,7 @@
     "react-dom": "18.2.0",
     "react-i18next": "^13.2.2",
     "react-icons": "^4.11.0",
+    "react-redux": "^8.1.2",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
