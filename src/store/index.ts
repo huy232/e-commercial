@@ -1,12 +1,9 @@
-// Create a store.js file
 import { configureStore } from "@reduxjs/toolkit"
-
-// Import your reducers here
-import userReducer from "./slices/authSlice" // Define this in the next step
+import userReducer from "./slices/userSlice"
 
 const store = configureStore({
 	reducer: {
-		user: userReducer, // Add your reducers here
+		user: userReducer,
 	},
 })
 

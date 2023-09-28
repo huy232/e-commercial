@@ -12,7 +12,7 @@ const SearchBar = ({ translation }: SearchBarProps) => {
 				<HiMagnifyingGlass className="text-slate-500" />
 			</span>
 			<input
-				className="placeholder:italic placeholder:text-slate-400 outline-none block w-full border border-transparent rounded-md py-1 pl-6 pr-1 shadow-sm focus:border-yellow-900 focus:ring-yellow-900 focus:ring-1 sm:text-sm duration-200"
+				className="placeholder:italic placeholder:text-slate-400 dark:bg-[#52525b] outline-none block w-full border border-transparent rounded-md py-1 pl-6 pr-1 shadow-sm focus:border-yellow-900 focus:ring-yellow-900 focus:ring-1 sm:text-sm duration-200"
 				placeholder={`${translation}`}
 				type="text"
 				name="search"
