@@ -14,6 +14,7 @@
   "LoginPage": {
     "login": "Log in",
     "signUp": "Sign up",
+    "logout": "Logout",
     "searchPlaceholder": "Search for specific product..."
   }
 }
