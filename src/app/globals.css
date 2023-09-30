@@ -4,6 +4,10 @@
 
 :root {
 	--header-height: 60px;
+	--header-content-height: 40px;
+	--header-user-width: 160px;
+	--skeleton-base-color: #52525b;
+	--skeleton-highlight-color: #444;
 }
 
 @media (prefers-color-scheme: dark) {

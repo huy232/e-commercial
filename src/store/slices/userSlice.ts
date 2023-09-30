@@ -1,10 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-
-export interface User {
-	id: string
-	name: string
-	image: string
-}
+import { User } from "@/types/user"
 
 export interface AuthState {
 	user: User | null
