@@ -3,6 +3,7 @@ import { ThemeSwitcher } from "@/components/Navbar/ThemeSwitcher"
 import SearchBar from "./Navbar/SearchBar"
 import UserButton from "./Navbar/UserButton"
 import Logo from "./Navbar/Logo"
+import Cart from "./Navbar/Cart"
 
 type Props = {}
 export default function Header({}: Props) {
@@ -13,6 +14,7 @@ export default function Header({}: Props) {
 			<Logo />
 			<SearchBar translation={t("searchPlaceholder")} />
 			<div className="flex items-center">
+				<Cart />
 				<UserButton />
 				<ThemeSwitcher />
 			</div>
