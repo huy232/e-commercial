@@ -18,12 +18,14 @@ const Cart = (props: Props) => {
 	)
 
 	return (
-		<div className={"relative"}>
+		<div className="group relative">
 			<div className="relative mx-2">
 				<AiOutlineShoppingCart className="text-3xl mx-2" />
 				<p className={cartClassName}>{itemCount}</p>
 			</div>
-			{<CartList />}
+			<div className="hidden group-hover:block">
+				<CartList />
+			</div>
 		</div>
 	)
 }

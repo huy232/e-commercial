@@ -35,7 +35,7 @@ export const ThemeSwitcher = () => {
 	}, [setTheme])
 
 	return (
-		<button className={` ${themeMode}`} onClick={toggleTheme}>
+		<button className={themeMode} onClick={toggleTheme}>
 			{theme === "light" ? <BsFillSunFill /> : <BsFillMoonFill />}
 		</button>
 	)
