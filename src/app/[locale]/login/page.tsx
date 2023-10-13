@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { RootState } from "@/store"
 import supabase from "@/supabase"
 import Button from "@/components/Button"

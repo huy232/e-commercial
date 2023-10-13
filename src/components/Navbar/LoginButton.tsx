@@ -11,8 +11,7 @@ const LoginButton = ({ translate }: Props) => {
 			href={"/login"}
 			className="flex flex-cols items-center hover:opacity-70 duration-200 bg-green-500 dark:bg-yellow-500 p-1 rounded mx-2"
 		>
-			<BiLogInCircle className="mr-1" />
-			<p>{translate}</p>
+			<BiLogInCircle />
 		</Link>
 	)
 }

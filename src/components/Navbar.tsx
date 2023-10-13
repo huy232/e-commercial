@@ -7,15 +7,15 @@ import Cart from "./Navbar/Cart"
 
 type Props = {}
 export default function Header({}: Props) {
-	const t = useTranslations("LoginPage")
-
 	return (
-		<header className="flex flex-cols justify-between items-center h-var(--header-height) w-full">
-			<Logo />
-			<SearchBar translation={t("searchPlaceholder")} />
+		<header className="flex flex-cols justify-between items-center h-navbar w-full">
 			<div className="flex items-center">
-				<Cart />
+				<Logo />
+				<SearchBar />
+			</div>
+			<div className="flex items-center">
 				<UserButton />
+				<Cart />
 				<ThemeSwitcher />
 			</div>
 		</header>

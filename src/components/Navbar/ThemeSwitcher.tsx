@@ -17,7 +17,7 @@ export const ThemeSwitcher = () => {
 	const darkMode = "dark:text-yellow-500"
 
 	const themeMode = classNames(
-		"flex items-center justify-center border border-solid rounded-full border-green-500 dark:border-yellow-500 hover:border-transparent hover:opacity-80 m-2 duration-200 h-[40px] w-[40px]",
+		"flex items-center justify-center border border-solid rounded-full border-green-500 dark:border-yellow-500 hover:border-transparent hover:opacity-80 mx-2 duration-200 h-full p-1",
 		lightMode,
 		darkMode
 	)

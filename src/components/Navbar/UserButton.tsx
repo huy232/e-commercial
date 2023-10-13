@@ -1,7 +1,7 @@
 "use client"
 import { useTranslations } from "next-intl"
 import { RootState } from "@/store"
-import { logoutUser, setUser } from "@/store/slices/userSlice"
+import { setUser } from "@/store/slices/userSlice"
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect, useState } from "react"
 import supabase from "@/supabase"
@@ -54,7 +54,7 @@ const UserButton = () => {
 			<div className="h-full">
 				<BaseSkeleton
 					width="var(--header-user-width)"
-					height="var(--header-content-height)"
+					height="h-full"
 					className="mb-[4px]"
 				/>
 			</div>

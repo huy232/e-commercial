@@ -1,3 +1,6 @@
+"use client"
+
+import { useWindowSize } from "@/hooks/useWindowSize"
 import Image from "next/image"
 
 interface userMetadata {
@@ -16,16 +19,21 @@ type Props = {
 	userMetadata: userMetadata
 }
 const User = ({ userMetadata }: Props) => {
+	const size = useWindowSize()
+
 	return (
-		<div className="flex flex-row items-center w-var(--header-user-width)">
+		<div className="flex flex-row items-center h-full">
 			<Image
 				className="rounded"
 				src={(userMetadata.avatar_url as string) || ""}
 				alt="User image"
-				width={40}
-				height={40}
+				width={30}
+				height={0}
+				style={{ height: "100%", width: "auto" }}
 			/>
-			<p className="px-2 font-black line-clamp-1">{userMetadata.name}</p>
+			<p className="hidden sm:block px-2 font-black line-clamp-1">
+				{userMetadata.name}
+			</p>
 		</div>
 	)
 }

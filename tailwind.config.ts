@@ -9,6 +9,9 @@ const config: Config = {
 	],
 	darkMode: ["class"],
 	theme: {
+		height: {
+			navbar: "var(--header-height)",
+		},
 		extend: {},
 	},
 	plugins: [forms],

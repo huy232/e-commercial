@@ -9,8 +9,8 @@ body {
 
 :root {
 	--header-height: 60px;
-	--header-content-height: 40px;
-	--header-user-width: 160px;
+	--header-content-height: 60px;
+	/* --header-user-width: 160px; */
 	--skeleton-base-color: #52525b;
 	--skeleton-highlight-color: #444;
 }
@@ -20,5 +20,10 @@ body {
 	}
 }
 
-body {
+@media screen and (max-width: 640px) {
+	:root {
+		--header-height: 30px;
+		--header-content-height: 30px;
+		/* --header-user-width: 160px; */
+	}
 }

@@ -2,7 +2,6 @@
 import { useState } from "react"
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import classNames from "classnames"
-import CartList from "./CartList"
 
 type Props = {
 	itemCount?: string
@@ -10,21 +9,23 @@ type Props = {
 }
 
 const Cart = (props: Props) => {
+	const [isHovered, setIsHovered] = useState(false)
 	const { itemCount = "99+", itemInfo } = props
 
 	const cartClassName = classNames(
-		"absolute flex items-center justify-center right-[2px] bottom-[-10px] rounded-full bg-red-500 w-[30px] h-[30px] text-[12px] font-bold transition-all duration-200 cursor-default",
+		"absolute flex items-center justify-center right-[2px] bottom-[-10px] rounded-full bg-red-500 text-[12px] font-bold transition-all duration-200 cursor-default",
 		itemCount ? "opacity-100" : "opacity-0"
 	)
 
 	return (
-		<div className="group relative">
+		<div
+			className="group relative"
+			onMouseEnter={() => setIsHovered(true)}
+			onMouseLeave={() => setIsHovered(false)}
+		>
 			<div className="relative mx-2">
-				<AiOutlineShoppingCart className="text-3xl mx-2" />
-				<p className={cartClassName}>{itemCount}</p>
-			</div>
-			<div className="hidden group-hover:block">
-				<CartList />
+				<AiOutlineShoppingCart className="text-xl sm:text-2xl sm:mx-1" />
+				{/* <p className={cartClassName}>{itemCount}</p> */}
 			</div>
 		</div>
 	)
