@@ -7,7 +7,7 @@ import { ThemeProvider } from "./theme-provider"
 import { switchThemeDuration } from "@/constant/"
 import classNames from "classnames"
 
-import Navbar from "@/components/Navbar"
+import { Navbar } from "@/components"
 
 const inter = Inter({ subsets: ["latin"] })
 

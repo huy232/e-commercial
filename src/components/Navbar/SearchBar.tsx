@@ -2,7 +2,7 @@
 
 import classNames from "classnames"
 import { useTranslations } from "next-intl"
-import React, { useState } from "react"
+import { useState } from "react"
 import { HiMagnifyingGlass } from "react-icons/hi2"
 
 const SearchBar = () => {

@@ -1,10 +1,10 @@
 "use client"
-import React, { useEffect } from "react"
+import { useEffect } from "react"
 import { useTheme } from "next-themes"
 import classNames from "classnames"
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs"
 
-export const ThemeSwitcher = () => {
+const ThemeSwitcher = () => {
 	const { theme, setTheme } = useTheme()
 
 	const toggleTheme = () => {
@@ -40,3 +40,5 @@ export const ThemeSwitcher = () => {
 		</button>
 	)
 }
+
+export default ThemeSwitcher

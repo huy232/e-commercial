@@ -1,6 +1,4 @@
 "use client"
-
-import { useWindowSize } from "@/hooks/useWindowSize"
 import Image from "next/image"
 
 interface userMetadata {
@@ -19,8 +17,6 @@ type Props = {
 	userMetadata: userMetadata
 }
 const User = ({ userMetadata }: Props) => {
-	const size = useWindowSize()
-
 	return (
 		<div className="flex flex-row items-center h-full">
 			<Image

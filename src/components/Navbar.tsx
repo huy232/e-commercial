@@ -1,12 +1,7 @@
-import { useTranslations } from "next-intl"
-import { ThemeSwitcher } from "@/components/Navbar/ThemeSwitcher"
-import SearchBar from "./Navbar/SearchBar"
-import UserButton from "./Navbar/UserButton"
-import Logo from "./Navbar/Logo"
-import Cart from "./Navbar/Cart"
+import { ThemeSwitcher, SearchBar, UserButton, Logo, Cart } from "@/components"
 
 type Props = {}
-export default function Header({}: Props) {
+export default function Navbar({}: Props) {
 	return (
 		<header className="flex flex-cols justify-between items-center h-navbar w-full">
 			<div className="flex items-center">

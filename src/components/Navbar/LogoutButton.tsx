@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux"
 import { logoutUser } from "@/store/slices/userSlice"
 import { BiLogOutCircle } from "react-icons/bi"
-import Button from "../Button"
+import { Button } from "@/components"
 import supabase from "@/supabase"
 
 type Props = {

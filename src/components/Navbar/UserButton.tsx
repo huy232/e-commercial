@@ -6,10 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useEffect, useState } from "react"
 import supabase from "@/supabase"
 
-import BaseSkeleton from "../BaseSkeleton"
-import LoginButton from "./LoginButton"
-import User from "./User"
-import LogoutButton from "./LogoutButton"
+import { BaseSkeleton, LoginButton, User, LogoutButton } from "@/components"
 
 const UserButton = () => {
 	const dispatch = useDispatch()

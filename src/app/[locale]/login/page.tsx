@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"
 import { useSelector } from "react-redux"
 import { RootState } from "@/store"
 import supabase from "@/supabase"
-import Button from "@/components/Button"
+import { Button } from "@/components"
 
 export default function Login() {
 	const user = useSelector((state: RootState) => state.user.user)
