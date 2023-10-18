@@ -1,18 +1,22 @@
-import { ThemeSwitcher, SearchBar, UserButton, Logo, Cart } from "@/components"
+import {
+	ThemeSwitcher,
+	SearchBar,
+	UserButton,
+	Logo,
+	Cart,
+	Sidebar,
+} from "@/components"
 
 type Props = {}
 export default function Navbar({}: Props) {
 	return (
-		<header className="flex flex-cols justify-between items-center h-navbar w-full">
-			<div className="flex items-center">
-				<Logo />
-				<SearchBar />
-			</div>
-			<div className="flex items-center">
-				<UserButton />
-				<Cart />
-				<ThemeSwitcher />
-			</div>
+		<header className="flex flex-cols">
+			<Sidebar />
+			<Logo />
+			<SearchBar />
+			<UserButton />
+			<Cart />
+			<ThemeSwitcher />
 		</header>
 	)
 }

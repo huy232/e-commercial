@@ -7,6 +7,7 @@ import SearchBar from "./Navbar/SearchBar"
 import ThemeSwitcher from "./Navbar/ThemeSwitcher"
 import User from "./Navbar/User"
 import UserButton from "./Navbar/UserButton"
+import Sidebar from "./Navbar/Sidebar"
 // Skeleton
 import BaseSkeleton from "./BaseSkeleton"
 
@@ -33,4 +34,5 @@ export {
 	ListItem,
 	LocaleSwitcher,
 	Navbar,
+	Sidebar,
 }
