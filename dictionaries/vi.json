@@ -16,5 +16,18 @@
     "signUp": "Đăng ký",
     "logout": "Đăng xuất",
     "searchPlaceholder": "Tìm kiếm một sản phẩm cụ thể..."
+  },
+  "Sidebar": {
+    "login": "Đăng nhập",
+    "logout": "Đăng xuất",
+    "signUp": "Đăng ký",
+    "home": "Trang chủ",
+    "cart": "Giỏ hàng",
+    "themeSwitch": "Chế độ sáng/tối"
+  },
+  "NavItems": {
+    "shirts": "Áo",
+    "pants": "Quần",
+    "all": "Tất cả" 
   }
 }

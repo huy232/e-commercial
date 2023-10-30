@@ -1,43 +1,51 @@
 "use client"
 
-import classNames from "classnames"
+import { createUrl } from "@/lib/utils"
 import { useTranslations } from "next-intl"
-import { useState } from "react"
+import { useSearchParams, useRouter } from "next/navigation"
 import { HiMagnifyingGlass } from "react-icons/hi2"
 
 const SearchBar = () => {
 	const t = useTranslations("LoginPage")
 	const translation = t("searchPlaceholder")
-	const [isInputVisible, setInputVisible] = useState(false)
 
-	const toggleInput = () => {
-		setInputVisible(!isInputVisible)
+	const router = useRouter()
+	const searchParams = useSearchParams()
+
+	function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+		e.preventDefault()
+
+		const val = e.target as HTMLFormElement
+		const search = val.search as HTMLInputElement
+		const newParams = new URLSearchParams(searchParams.toString())
+
+		if (search.value) {
+			newParams.set("q", search.value)
+		} else {
+			newParams.delete("q")
+		}
+
+		router.push(createUrl("/search", newParams))
 	}
 
-	const searchBarClass = classNames(
-		"placeholder-italic placeholder-text-slate-400 dark:bg-[#52525b] outline-none block border border-transparent rounded-full shadow-sm focus:border-yellow-900 focus:ring-yellow-900 focus:ring-1 text-xs duration-200 h-[30px]",
-		isInputVisible ? "w-full pl-7" : "w-0 pl-0 pr-0 border-0"
-	)
-	const searchBarIcon = classNames(
-		`text-slate-500 cursor-pointer duration-200 mx-2`,
-		isInputVisible ? "opacity-100 text-white" : "opacity-70"
-	)
-
 	return (
-		<div className="relative mx-4">
-			<span className="absolute inset-y-0 left-0 flex items-center">
-				<HiMagnifyingGlass className={searchBarIcon} onClick={toggleInput} />
-			</span>
+		<form
+			onSubmit={onSubmit}
+			className="w-max-[550px] relative w-full lg:w-80 xl:w-full"
+		>
 			<input
-				className={searchBarClass}
-				style={{
-					transition: "width 0.5s ease-in-out, padding 0.5s ease-in-out",
-				}}
-				placeholder={translation}
+				key={searchParams?.get("q")}
 				type="text"
 				name="search"
+				placeholder={translation}
+				autoComplete="off"
+				defaultValue={searchParams?.get("q") || ""}
+				className="w-full rounded-lg border bg-white pl-1 pr-8 py-2 text-sm text-black placeholder:text-neutral-500 dark:border-neutral-800 dark:bg-transparent dark:text-white dark:placeholder:text-neutral-400"
 			/>
-		</div>
+			<div className="absolute right-0 top-0 mr-3 flex h-full items-center translate-y-1/2">
+				<HiMagnifyingGlass className="h-4" />
+			</div>
+		</form>
 	)
 }
 

@@ -16,5 +16,18 @@
     "signUp": "Sign up",
     "logout": "Logout",
     "searchPlaceholder": "Search for specific product..."
+  },
+  "Sidebar": {
+    "login": "Log in",
+    "logout": "Log out",
+    "signUp": "Sign up",
+    "home": "Home",
+    "cart": "Cart",
+    "themeSwitch": "Dark/light mode"
+  },
+  "NavItems": {
+    "shirts": "Shirts",
+    "pants": "Pants",
+    "all": "All" 
   }
 }

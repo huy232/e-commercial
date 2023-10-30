@@ -1,5 +1,5 @@
 // Navbar Component
-import Cart from "./Navbar/Cart"
+import Cart from "./Cart/Cart"
 import LoginButton from "./Navbar/LoginButton"
 import Logo from "./Navbar/Logo"
 import LogoutButton from "./Navbar/LogoutButton"
@@ -17,6 +17,9 @@ import Item from "./Item"
 import ListItem from "./ListItem"
 import LocaleSwitcher from "./LocaleSwitcher"
 import Navbar from "./Navbar"
+import { NavItems } from "./Navbar/NavItems"
+import OpenCart from "./Cart/OpenCart"
+import CloseCart from "./Cart/CloseCart"
 
 export {
 	Cart,
@@ -35,4 +38,7 @@ export {
 	LocaleSwitcher,
 	Navbar,
 	Sidebar,
+	NavItems,
+	OpenCart,
+	CloseCart,
 }
