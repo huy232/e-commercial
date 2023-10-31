@@ -5,7 +5,7 @@ import classNames from "classnames"
 export const NavItems = ({ className }: { className?: string }) => {
 	const t = useTranslations("NavItems")
 	const navItemsClass = classNames(
-		"gap-6 text-sm md:flex md:items-center",
+		"px-2 gap-4 text-sm sm:flex sm:items-center",
 		className
 	)
 	const navItems = [

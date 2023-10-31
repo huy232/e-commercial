@@ -1,4 +1,5 @@
 "use client"
+import classNames from "classnames"
 import Image from "next/image"
 
 interface userMetadata {
@@ -15,8 +16,15 @@ interface userMetadata {
 
 type Props = {
 	userMetadata: userMetadata
+	isMobile?: boolean
 }
-const User = ({ userMetadata }: Props) => {
+
+const User = ({ userMetadata, isMobile }: Props) => {
+	const userClass = classNames(
+		isMobile && "block",
+		!isMobile && "hidden",
+		"md:block px-2 font-black line-clamp-1"
+	)
 	return (
 		<div className="flex flex-row items-center h-full">
 			<Image
@@ -27,9 +35,7 @@ const User = ({ userMetadata }: Props) => {
 				height={0}
 				style={{ height: "100%", width: "auto" }}
 			/>
-			<p className="hidden sm:block px-2 font-black line-clamp-1">
-				{userMetadata.name}
-			</p>
+			<p className={userClass}>{userMetadata.name}</p>
 		</div>
 	)
 }

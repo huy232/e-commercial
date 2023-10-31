@@ -15,7 +15,8 @@
     "login": "Đăng nhập",
     "signUp": "Đăng ký",
     "logout": "Đăng xuất",
-    "searchPlaceholder": "Tìm kiếm một sản phẩm cụ thể..."
+    "searchPlaceholder": "Tìm kiếm một sản phẩm cụ thể...",
+    "social": "Đăng nhập với"
   },
   "Sidebar": {
     "login": "Đăng nhập",

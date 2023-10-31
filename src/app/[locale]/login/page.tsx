@@ -3,31 +3,23 @@
 import { useRouter } from "next/navigation"
 import { useSelector } from "react-redux"
 import { RootState } from "@/store"
-import supabase from "@/supabase"
-import { Button } from "@/components"
+import { CredentialLogin, SocialLogin } from "@/components"
+import { useTranslations } from "next-intl"
 
 export default function Login() {
+	const t = useTranslations("LoginPage")
+	const loginWith = t("social")
 	const user = useSelector((state: RootState) => state.user.user)
 	const router = useRouter()
 
 	if (user) {
 		router.push("/")
 	}
-
-	const handleGoogleLogin = async () => {
-		const { data, error } = await supabase.auth.signInWithOAuth({
-			provider: "google",
-		})
-
-		if (data) {
-		} else if (error) {
-			console.error("Google login error:", error)
-		}
-	}
-
 	return (
-		<div>
-			<Button onClick={() => handleGoogleLogin()}>Sign in with google</Button>
+		<div className="flex flex-col justify-center items-center">
+			<SocialLogin />
+			<div>OR</div>
+			<CredentialLogin />
 		</div>
 	)
 }

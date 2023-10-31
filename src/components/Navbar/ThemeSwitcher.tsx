@@ -3,8 +3,11 @@ import { useEffect } from "react"
 import { useTheme } from "next-themes"
 import classNames from "classnames"
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs"
+import { useTranslations } from "next-intl"
 
 const ThemeSwitcher = () => {
+	const t = useTranslations("Sidebar")
+	const themeTranslate = t("themeSwitch")
 	const { theme, setTheme } = useTheme()
 
 	const toggleTheme = () => {
@@ -17,7 +20,7 @@ const ThemeSwitcher = () => {
 	const darkMode = "dark:text-yellow-500"
 
 	const themeMode = classNames(
-		"flex items-center justify-center border border-solid rounded-full border-green-500 dark:border-yellow-500 hover:border-transparent hover:opacity-80 mx-2 duration-200 h-full p-1",
+		"flex items-center justify-center border border-solid rounded-full border-green-500 dark:border-yellow-500 hover:border-transparent hover:opacity-80 duration-200 h-full p-1 my-2",
 		lightMode,
 		darkMode
 	)
@@ -36,6 +39,7 @@ const ThemeSwitcher = () => {
 
 	return (
 		<button className={themeMode} onClick={toggleTheme}>
+			<p className="mr-2">{themeTranslate}</p>
 			{theme === "light" ? <BsFillSunFill /> : <BsFillMoonFill />}
 		</button>
 	)

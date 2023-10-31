@@ -4,7 +4,13 @@ import { IoReorderThree } from "react-icons/io5"
 import classNames from "classnames"
 import { usePathname, useSearchParams } from "next/navigation"
 import { FaXmark } from "react-icons/fa6"
-import { NavItems, SearchBar } from ".."
+import {
+	NavItems,
+	SearchBar,
+	ThemeSwitcher,
+	User,
+	UserButton,
+} from "@/components"
 
 type Props = {}
 
@@ -29,7 +35,11 @@ const Sidebar = (props: Props) => {
 		setIsOpen(false)
 	}, [pathname, searchParams])
 
-	const show = classNames(isOpen && "block", !isOpen && "hidden")
+	const show = classNames(
+		"duration-500 ease-in-out",
+		isOpen && "block fixed left-0 top-0 z-10 w-full h-[100vh] bg-stone-950 p-6",
+		!isOpen && "block fixed left-[-100%]"
+	)
 
 	return (
 		<>
@@ -37,7 +47,7 @@ const Sidebar = (props: Props) => {
 				<button
 					onClick={openMobileMenu}
 					aria-label="Open mobile menu"
-					className="flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white md:hidden"
+					className="flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white sm:hidden"
 				>
 					<IoReorderThree className="h-4" />
 				</button>
@@ -55,6 +65,10 @@ const Sidebar = (props: Props) => {
 					<SearchBar />
 				</div>
 				<NavItems className={"block"} />
+				<div className="absolute bottom-0 pb-4 border-solid border-t-[2px]">
+					<ThemeSwitcher />
+					<UserButton isMobile={true} />
+				</div>
 			</div>
 		</>
 	)

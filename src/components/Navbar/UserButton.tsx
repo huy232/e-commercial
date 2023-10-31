@@ -8,12 +8,14 @@ import supabase from "@/supabase"
 
 import { BaseSkeleton, LoginButton, User, LogoutButton } from "@/components"
 
-const UserButton = () => {
+type Props = {
+	isMobile?: boolean
+}
+
+const UserButton = ({ isMobile }: Props) => {
 	const dispatch = useDispatch()
 	const user = useSelector((state: RootState) => state.user.user)
 	const t = useTranslations("LoginPage")
-
-	const [loading, setLoading] = useState(true)
 
 	const login = t("login")
 	const signup = t("signUp")
@@ -26,13 +28,11 @@ const UserButton = () => {
 			} = await supabase.auth.getSession()
 
 			dispatch(setUser(session?.user ?? null))
-			setLoading(false)
 		}
 
 		const { data: authListener } = supabase.auth.onAuthStateChange(
 			async (event, session) => {
 				setUser(session?.user ?? null)
-				setLoading(false)
 			}
 		)
 
@@ -46,30 +46,18 @@ const UserButton = () => {
 
 	let content
 
-	if (loading) {
+	if (!user) {
+		content = <LoginButton translate={login} isMobile={isMobile} />
+	}
+
+	if (user) {
+		const userMetadata = user.user_metadata
 		content = (
-			<div className="h-full">
-				<BaseSkeleton
-					width="var(--header-user-width)"
-					height="h-full"
-					className="mb-[4px]"
-				/>
+			<div className="flex flex-cols items-center">
+				<User userMetadata={userMetadata} isMobile={isMobile} />
+				<LogoutButton translate={logout} isMobile={isMobile} />
 			</div>
 		)
-	} else {
-		if (!user) {
-			content = <LoginButton translate={login} />
-		}
-
-		if (user) {
-			const userMetadata = user.user_metadata
-			content = (
-				<div className="flex flex-cols items-center justify-center">
-					<User userMetadata={userMetadata} />
-					<LogoutButton translate={logout} />
-				</div>
-			)
-		}
 	}
 
 	return content

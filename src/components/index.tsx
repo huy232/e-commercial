@@ -20,6 +20,8 @@ import Navbar from "./Navbar"
 import { NavItems } from "./Navbar/NavItems"
 import OpenCart from "./Cart/OpenCart"
 import CloseCart from "./Cart/CloseCart"
+import CredentialLogin from "./Login/CredentialLogin"
+import SocialLogin from "./Login/SocialLogin"
 
 export {
 	Cart,
@@ -41,4 +43,6 @@ export {
 	NavItems,
 	OpenCart,
 	CloseCart,
+	CredentialLogin,
+	SocialLogin,
 }

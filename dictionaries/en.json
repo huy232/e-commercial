@@ -15,7 +15,8 @@
     "login": "Log in",
     "signUp": "Sign up",
     "logout": "Logout",
-    "searchPlaceholder": "Search for specific product..."
+    "searchPlaceholder": "Search for specific product...",
+    "social": "Log in with"
   },
   "Sidebar": {
     "login": "Log in",
