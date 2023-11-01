@@ -1,8 +1,10 @@
-import { useTranslations } from "next-intl"
+"use client"
+import { useLocale, useTranslations } from "next-intl"
 import Link from "next/link"
 import classNames from "classnames"
 
 export const NavItems = ({ className }: { className?: string }) => {
+	const locale = useLocale()
 	const t = useTranslations("NavItems")
 	const navItemsClass = classNames(
 		"px-2 gap-4 text-sm sm:flex sm:items-center",
@@ -11,15 +13,15 @@ export const NavItems = ({ className }: { className?: string }) => {
 	const navItems = [
 		{
 			label: t("all"),
-			href: "/search",
+			href: `/${locale}/search`,
 		},
 		{
 			label: t("shirts"),
-			href: "/search/shirts",
+			href: `/${locale}/search/shirts`,
 		},
 		{
 			label: t("pants"),
-			href: "/search/pants",
+			href: `/${locale}/search/pants`,
 		},
 	]
 	return (

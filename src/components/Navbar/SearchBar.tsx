@@ -1,11 +1,12 @@
 "use client"
 
 import { createUrl } from "@/lib/utils"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { useSearchParams, useRouter } from "next/navigation"
 import { HiMagnifyingGlass } from "react-icons/hi2"
 
 const SearchBar = () => {
+	const locale = useLocale()
 	const t = useTranslations("LoginPage")
 	const translation = t("searchPlaceholder")
 

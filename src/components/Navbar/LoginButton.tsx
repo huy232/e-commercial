@@ -1,5 +1,6 @@
+"use client"
 import classNames from "classnames"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import Link from "next/link"
 import { BiLogInCircle } from "react-icons/bi"
 
@@ -9,6 +10,7 @@ type Props = {
 }
 
 const LoginButton = ({ translate, isMobile }: Props) => {
+	const locale = useLocale()
 	const t = useTranslations("Sidebar")
 	const login = t("login")
 	const loginClass = classNames(
@@ -18,7 +20,7 @@ const LoginButton = ({ translate, isMobile }: Props) => {
 	)
 	return (
 		<Link
-			href={"/login"}
+			href={`${locale}/login`}
 			className="flex items-center hover:opacity-70 duration-200 bg-green-500 dark:bg-yellow-500 p-1 rounded mx-2 w-fit"
 		>
 			<p className={loginClass}>{login}</p>

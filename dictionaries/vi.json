@@ -16,7 +16,9 @@
     "signUp": "Đăng ký",
     "logout": "Đăng xuất",
     "searchPlaceholder": "Tìm kiếm một sản phẩm cụ thể...",
-    "social": "Đăng nhập với"
+    "social": "Đăng nhập với",
+    "or": "Hoặc",
+    "password": "Mật khẩu"
   },
   "Sidebar": {
     "login": "Đăng nhập",
@@ -30,5 +32,8 @@
     "shirts": "Áo",
     "pants": "Quần",
     "all": "Tất cả" 
+  },
+  "LanguageSwitch": {
+    "language": "Đổi ngôn ngữ"
   }
 }

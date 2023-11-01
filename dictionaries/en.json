@@ -16,7 +16,9 @@
     "signUp": "Sign up",
     "logout": "Logout",
     "searchPlaceholder": "Search for specific product...",
-    "social": "Log in with"
+    "social": "Log in with",
+    "or": "Or",
+    "password": "Password"
   },
   "Sidebar": {
     "login": "Log in",
@@ -30,5 +32,8 @@
     "shirts": "Shirts",
     "pants": "Pants",
     "all": "All" 
+  },
+  "LanguageSwitch": {
+    "language": "Change language"
   }
 }

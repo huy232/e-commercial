@@ -5,6 +5,7 @@ import classNames from "classnames"
 import { usePathname, useSearchParams } from "next/navigation"
 import { FaXmark } from "react-icons/fa6"
 import {
+	LocaleSwitcher,
 	NavItems,
 	SearchBar,
 	ThemeSwitcher,
@@ -66,6 +67,7 @@ const Sidebar = (props: Props) => {
 				</div>
 				<NavItems className={"block"} />
 				<div className="absolute bottom-0 pb-4 border-solid border-t-[2px]">
+					<LocaleSwitcher />
 					<ThemeSwitcher />
 					<UserButton isMobile={true} />
 				</div>

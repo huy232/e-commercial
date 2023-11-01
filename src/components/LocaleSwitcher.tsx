@@ -1,13 +1,18 @@
 "use client"
 
-import { usePathname } from "next/navigation"
-import Link from "next/link"
-import { I18nConfig } from "../i18n"
-
-const i18n = require("../i18n").default as I18nConfig
+import { useTranslations } from "next-intl"
+import { locales } from "../i18n"
+import { usePathname, useRouter } from "next/navigation"
+import { useState } from "react"
 
 export default function LocaleSwitcher() {
+	const t = useTranslations("LanguageSwitch")
+	const languageSwitch = t("language")
 	const pathName = usePathname()
+	const router = useRouter()
+	const initialLocale = pathName.split("/")[1] || "en" // Extract the locale from the URL or default to "en"
+	const [currentLocale, setCurrentLocale] = useState(initialLocale) // Use the extracted locale as the initial value
+
 	const redirectedPathName = (locale: string) => {
 		if (!pathName) return "/"
 		const segments = pathName.split("/")
@@ -15,18 +20,27 @@ export default function LocaleSwitcher() {
 		return segments.join("/")
 	}
 
+	const handleLocaleChange = (locale: string) => {
+		setCurrentLocale(locale) // Update the current locale in the state
+		router.push(redirectedPathName(locale))
+	}
+
 	return (
 		<div>
-			<p>Locale switcher:</p>
-			<ul>
-				{i18n.locales.map((locale) => {
+			<p>{languageSwitch}</p>
+			<select
+				className="bg-[#0d0d0d]"
+				onChange={(e) => handleLocaleChange(e.target.value)}
+				defaultValue={currentLocale}
+			>
+				{locales.map((locale: string) => {
 					return (
-						<li key={locale}>
-							<Link href={redirectedPathName(locale)}>{locale}</Link>
-						</li>
+						<option key={locale} value={locale}>
+							{locale}
+						</option>
 					)
 				})}
-			</ul>
+			</select>
 		</div>
 	)
 }

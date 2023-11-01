@@ -2,7 +2,6 @@ import createMiddleware from "next-intl/middleware"
 import { NextResponse } from "next/server"
 
 import type { NextRequest } from "next/server"
-import type { Database } from "@/lib/database.types"
 
 export async function supabaseMiddleware(req: NextRequest) {
 	const res = NextResponse.next()
